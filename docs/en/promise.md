@@ -10,8 +10,7 @@ This page summarizes the public API surface of the Promise module.
 - `Promise.reject(reason)`
 - `Promise.try(fn, ...)`
 
-Use these to create Promise values from async executors, immediate values, or
-code that may throw.
+Use these to create Promise values from async executors, immediate values, or code that may throw.
 
 ## Adapters
 
@@ -19,8 +18,7 @@ code that may throw.
 - `Promise.fromEvent(event, predicate?)`
 - `Promise.delay(seconds)`
 
-These helpers adapt callback-style or event-style workflows into Promise-based
-flows.
+These helpers adapt callback-style or event-style workflows into Promise-based flows.
 
 ## Combinators
 

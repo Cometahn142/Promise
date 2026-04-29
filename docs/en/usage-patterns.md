@@ -1,12 +1,10 @@
 # Usage Patterns
 
-This page focuses less on individual functions and more on how Promise fits
-into real Roblox code.
+This page focuses less on individual functions and more on how Promise fits into real Roblox code.
 
 ## Wrapping asynchronous work
 
-Use `Promise.new` when the underlying operation is asynchronous and you want the
-result to be explicit and composable.
+Use `Promise.new` when the underlying operation is asynchronous and you want the result to be explicit and composable.
 
 ```luau
 local function loadPlayerData(userId)
@@ -64,7 +62,6 @@ Promise.all({
 ```
 
 Common rules of thumb:
-
 - `all` for "everything must succeed"
 - `race` for "first result wins"
 - `any` for "first success wins"
@@ -72,9 +69,7 @@ Common rules of thumb:
 
 ## Cancellation
 
-Cancellation matters most when the caller may disappear before the work
-completes, such as:
-
+Cancellation matters most when the caller may disappear before the work completes, such as:
 - UI screens closing
 - players leaving
 - objects being destroyed
@@ -98,8 +93,7 @@ if ok then
 end
 ```
 
-Use this sparingly at boundaries where the synchronous style is easier to read.
-Inside reusable library code, returning the Promise is usually better.
+Use this sparingly at boundaries where the synchronous style is easier to read. Inside reusable library code, returning the Promise is usually better.
 
 ## Practical Advice
 
